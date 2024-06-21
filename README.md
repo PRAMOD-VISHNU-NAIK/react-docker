@@ -164,8 +164,9 @@ Here's how to push your Docker image to Docker Hub:
    ```bash
    docker tag my-app <your_dockerhub_username>/<repository_name>
    ```
-
-5. Push your Docker image to Docker Hub using the `docker push` command:
+   Here replace my-app with the name of the docker image which you created locally.
+   
+6. Push your Docker image to Docker Hub using the `docker push` command:
 
    ```bash
    docker push <your_dockerhub_username>/<repository_name>
