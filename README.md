@@ -56,13 +56,13 @@ In your terminal, navigate to the root directory of your React application and c
 Open the `Dockerfile` in your code editor and add the following contents:
 
 ```bash
-# Use an official Node runtime as a parent image
-FROM node:16
+# Install Node Docker image from the Docker Hub. Use an official Node runtime as a parent image
+FROM node:16            #This is because we need node to run the app   
 
-# Set the working directory to /app
-WORKDIR /app
+# Set the working directory to /app inside the docker image
+WORKDIR /app                  
 
-# Copy the package.json and package-lock.json to the working directory
+# Copy the package.json and package-lock.json to the working directory i.e /app
 COPY ./package*.json ./
 
 # Install the dependencies
