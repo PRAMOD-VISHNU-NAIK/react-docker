@@ -68,13 +68,13 @@ COPY ./package*.json ./
 # Install the dependencies
 RUN npm install
 
-# Copy the remaining application files to the working directory
+# Copy the remaining application files to the working directory i.e, source(.) to destination(.) except the files and folders mentioned in .dockerignore
 COPY . .
 
 # Build the application
 RUN npm run build
 
-# Expose port 3000 for the application
+# Expose port 3000 for the application from the docker image
 EXPOSE 3000
 
 # Start the application
